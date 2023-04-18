@@ -1,0 +1,52 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Azure Communication Services - Calling Web SDK</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+    </head>
+    <body>
+        <h4>Azure Communication Services - Calling Web SDK</h4>
+        <input id="user-access-token"
+            type="text"
+            placeholder="User access token"
+            style="margin-bottom:1em; width: 500px;" value="eyJhbGciOiJSUzI1NiIsImtpZCI6IjEwNiIsIng1dCI6Im9QMWFxQnlfR3hZU3pSaXhuQ25zdE5PU2p2cyIsInR5cCI6IkpXVCJ9.eyJza3lwZWlkIjoiYWNzOjYxZjE2ODM2LTlmMWYtNGQ1NC04YTg3LWVjYzQxMDBlOGE3OV8wMDAwMDAxOC0xZjE5LTI4NDMtODc0YS1hZDNhMGQwMGZjZWUiLCJzY3AiOjE3OTIsImNzaSI6IjE2ODE0NjY1NTciLCJleHAiOjE2ODE1NTI5NTcsInJnbiI6ImVtZWEiLCJhY3NTY29wZSI6ImNoYXQsdm9pcCIsInJlc291cmNlSWQiOiI2MWYxNjgzNi05ZjFmLTRkNTQtOGE4Ny1lY2M0MTAwZThhNzkiLCJyZXNvdXJjZUxvY2F0aW9uIjoiZXVyb3BlIiwiaWF0IjoxNjgxNDY2NTU3fQ.fNxKr-W3UZATG1g7WZOCKFPip-y65eiXCg5PzHND4mRypqB1w7R2XT0WfYWoDaadYGxwIzcBtH1MDR-mofD99JWOzWlZVi8_sCASYZKXnRGBdTzxwYQnwU760pLOvDlU8y2jphKuEusaHxwzZ3jrhFyoMX-hvfjhIY6HP-1MvRiXeJDQeKC5PYT-IplAuCa9QuX82XU4BJ8sZ44r1rh7idf_W11hCgNdM5XVualztm7kW8ahzIMWQiigWgA3x_ePJSGUU_FU_Tx6jswyOBjHLUEpVLXIEoNA8wNr3cSBaYAag5DZM6WHw6GjFfxHPqyL5f6l4HwtJzjqppeEdypz_A"/>
+        <button id="initialize-call-agent" type="button">Initialize Call Agent</button>
+        <br>
+        <br>
+        
+        <button id="start-call-button" type="button" disabled="true">Start Call</button>
+        <button id="hangup-call-button" type="button" disabled="true">Hang up Call</button>
+        <button id="accept-call-button" type="button" disabled="true">Accept Call</button>
+        <button id="start-video-button" type="button" disabled="true">Start Video</button>
+        <button id="stop-video-button" type="button" disabled="true">Stop Video</button>
+        <button id="start-share-button" type="button" >Start Share</button>
+        <button id="stop-share-button" type="button" >Stop Share</button>
+        <br>
+        <br>
+        <div id="connectedLabel" style="color: #13bb13;" hidden>Call is connected!</div>
+        <br>
+        <div id="remoteVideosGallery" style="width: 40%;" hidden>Remote participants' video streams:</div>
+        <br>
+        <div id="localVideoContainer" style="width: 30%;" hidden>Local video stream:</div>
+        <div id="chat">
+
+<h4>Azure Communication Services</h4>
+      <h1>Calling and Chat Quickstart</h1>
+          
+          <input id="thread-id-input" type="text" placeholder="Chat thread id"
+        style="margin-bottom:1em; width: 300px;" value="19:meeting_NTMyZDVhY2ItNDlmYy00OGVmLTk0M2EtNjhlMmU5NjYyNDlk@thread.v2" />
+        
+      <div class="chat-popup" id="chat-box">
+         <div id="messages-container"></div>
+         <form class="form-container">
+            <textarea placeholder="Type message.." name="msg" id="message-box" required></textarea>
+            <button type="button" class="btn" id="send-message">Send</button>
+         </form>
+      </div>
+
+        </div>
+        <!-- points to the bundle generated from client.js -->
+        <script src="./bundle.js"></script>
+    </body>
+</html>
